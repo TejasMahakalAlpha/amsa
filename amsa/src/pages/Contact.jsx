@@ -11,14 +11,26 @@ const Contact = () => {
     message: '',
   });
 
+  const [showPopup, setShowPopup] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Form submitted!');
+    setTimeout(() => {
+      setShowPopup(true);
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    }, 300);
   };
+
+  const closePopup = () => setShowPopup(false);
 
   return (
     <div className="contact-page-wrapper">
@@ -26,7 +38,6 @@ const Contact = () => {
       <div className="contact-video-wrapper">
         <video autoPlay muted loop playsInline className="contact-video">
           <source src="/assets/home/hero2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
         <div className="contact-video-overlay" />
       </div>
@@ -111,6 +122,17 @@ const Contact = () => {
           </form>
         </div>
       </section>
+
+      {/* Success Popup */}
+      {showPopup && (
+        <div className="contact-popup-overlay" onClick={closePopup}>
+          <div className="contact-popup" onClick={(e) => e.stopPropagation()}>
+            <h3>🎉 Thank You!</h3>
+            <p>Your message has been received successfully. We will get back to you soon!</p>
+            <button onClick={closePopup}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
