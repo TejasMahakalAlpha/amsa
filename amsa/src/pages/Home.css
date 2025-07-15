@@ -1,0 +1,253 @@
+/* GENERAL */
+.home-page-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e1117; /* Dark navy-gray */
+  color: #f2f3f5; /* Light text */
+  overflow-x: hidden;
+}
+
+/* Reusable section layout */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: #3b82f6; /* Calm blue */
+}
+
+/* HERO SECTION */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-video-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.2) contrast(1.1);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(14,17,23,0.6), #0e1117 90%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+.home-cta {
+  background-color: #3b82f6;
+  padding: 14px 30px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-cta:hover {
+  background-color: #2563eb;
+}
+
+/* OFFERINGS SECTION */
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.offering-card {
+  background: #1a1e25;
+  padding: 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #2c313c;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.offering-card:hover {
+  transform: translateY(-5px);
+}
+
+.offering-card h3 {
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.offering-card p {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+/* WHY SECTION */
+.why-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.why-list li {
+  position: relative;
+  padding: 12px 16px 12px 36px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.why-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 12px;
+  color: #3b82f6;
+}
+
+/* INDUSTRIES SECTION */
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.industry-tags span {
+  padding: 10px 18px;
+  background: #1a1e25;
+  border-radius: 20px;
+  color: #f2f3f5;
+  font-size: 1rem;
+  border: 1px solid #2c313c;
+}
+
+/* STATS SECTION */
+.stats-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.stat-box {
+  background: #1a1e25;
+  border: 1px solid #2c313c;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 2.8rem;
+  color: #3b82f6;
+}
+
+.stat-box p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+/* CASE STUDIES SECTION */
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.case-card {
+  background: #1a1e25;
+  border: 1px solid #2c313c;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+}
+
+.case-card h3 {
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.case-card p {
+  color: #cbd5e1;
+}
+
+/* IMAGE SHOWCASE SECTION */
+.showcase-section {
+  padding: 80px 20px;
+  background-color: #11151c;
+  text-align: center;
+}
+
+.showcase-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #3b82f6;
+}
+
+.showcase-section p {
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.showcase-image {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 16px;
+  border: 1px solid #2c313c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.showcase-image:hover {
+  transform: scale(1.015);
+}
