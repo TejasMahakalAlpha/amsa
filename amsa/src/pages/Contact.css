@@ -168,3 +168,67 @@
   transform: translateY(-2px);
   box-shadow: 0 0 12px #24d8ff;
 }
+
+/* POPUP STYLES */
+.contact-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.contact-popup {
+  background: #121a25;
+  border-radius: 14px;
+  padding: 40px 30px;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid #24d8ff30;
+  box-shadow: 0 0 20px rgba(36, 216, 255, 0.2);
+  animation: fadeInPopup 0.4s ease;
+}
+
+.contact-popup h3 {
+  font-size: 1.8rem;
+  color: #24d8ff;
+  margin-bottom: 12px;
+}
+
+.contact-popup p {
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-popup button {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #24d8ff, #127ba3);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-popup button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #24d8ff;
+}
+
+@keyframes fadeInPopup {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
